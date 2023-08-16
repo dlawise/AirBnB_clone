@@ -1,5 +1,6 @@
 0x00. AirBnB clone - The console
 
+
 Background Context
 Welcome to the AirBnB clone project!
 Before starting, please read the AirBnB concept page.
@@ -14,6 +15,8 @@ create a simple flow of serialization/deserialization: Instance <-> Dictionary <
 create all classes used for AirBnB (User, State, City, Place…) that inherit from BaseModel
 create the first abstracted storage engine of the project: File storage.
 create all unittests to validate all our classes and storage engine
+
+
 What’s a command interpreter?
 Do you remember the Shell? It’s exactly the same but limited to a specific use-case. In our case, we want to be able to manage the objects of our project:
 
@@ -22,6 +25,8 @@ Retrieve an object from a file, a database etc…
 Do operations on objects (count, compute stats, etc…)
 Update attributes of an object
 Destroy an object
+
+
 Resources
 Read or watch:
 
@@ -35,6 +40,8 @@ args/kwargs
 Python test cheatsheet
 cmd module wiki page
 python unittest
+
+
 Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
@@ -49,11 +56,15 @@ What is an UUID
 What is *args and how to use it
 What is **kwargs and how to use it
 How to handle named arguments in a function
+
+
 Copyright - Plagiarism
 You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
 You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
 You are not allowed to publish any content of this project.
 Any form of plagiarism is strictly forbidden and will result in removal from the program.
+
+
 Requirements
 Python Scripts
 Allowed editors: vi, vim, emacs
@@ -68,6 +79,8 @@ All your modules should have a documentation (python3 -c 'print(__import__("my_m
 All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
 All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
 A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
+
+
 Python Unit Tests
 Allowed editors: vi, vim, emacs
 All your files should end with a new line
@@ -84,6 +97,8 @@ All your modules should have a documentation (python3 -c 'print(__import__("my_m
 All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
 All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
 We strongly encourage you to work together on test cases, so that you don’t miss any edge case
+
+
 GitHub
 There should be one project repository per group. If you clone/fork/whatever a project repository with the same name before the second deadline, you risk a 0% score.
 
@@ -125,6 +140,7 @@ EOF  help  quit
 $
 All tests should also pass in non-interactive mode: $ echo "python3 -m unittest discover tests" | bash
 
+
 0. README, AUTHORS
 mandatory
 Write a README.md:
@@ -136,13 +152,16 @@ examples
 You should have an AUTHORS file at the root of your repository, listing all individuals having contributed content to the repository. For format, reference Docker’s AUTHORS page
 You should use branches and pull requests on GitHub - it will help you as team to organize your work
 
+
 1. Be pycodestyle compliant!
 mandatory
 Write beautiful code that passes the pycodestyle checks.
 
+
 2. Unittests
 mandatory
 All your files, classes, functions must be tested with unit tests
+
 
 3. BaseModel
 mandatory
@@ -185,6 +204,7 @@ each value of this dictionary is the value of this attribute name
 Warning: created_at and updated_at are strings in this dictionary, but inside your BaseModel instance is working with datetime object. You have to convert these strings into datetime object. Tip: you know the string format of these datetime
 otherwise:
 create id and created_at as you did previously (new instance)
+
 
 5. Store first object
 mandatory
@@ -233,6 +253,7 @@ call save(self) method of storage
 __init__(self, *args, **kwargs):
 if it’s a new instance (not from a dictionary representation), add a call to the method new(self) on storage
 
+
 6. Console 0.0.1
 mandatory
 Write a program called console.py that contains the entry point of the command interpreter:
@@ -245,6 +266,7 @@ help (this action is provided by default by cmd but you should keep it updated a
 a custom prompt: (hbnb)
 an empty line + ENTER shouldn’t execute anything
 Your code should not be executed when imported
+
 
 7. Console 0.1
 mandatory
@@ -302,6 +324,7 @@ Update FileStorage to manage correctly serialization and deserialization of User
 
 Update your command interpreter (console.py) to allow show, create, destroy, update and all used with User.
 
+
 9. More classes!
 mandatory
 Write all those classes that inherit from BaseModel:
@@ -334,6 +357,7 @@ Public class attributes:
 place_id: string - empty string: it will be the Place.id
 user_id: string - empty string: it will be the User.id
 text: string - empty string
+
 
 10. Console 1.0
 mandatory

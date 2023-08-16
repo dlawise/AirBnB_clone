@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Unittest module for the Review Class."""
+"""Unittest module for the Review Class"""
 
 import unittest
 from datetime import datetime
@@ -15,25 +15,30 @@ from models.base_model import BaseModel
 
 class TestReview(unittest.TestCase):
 
-    """Test Cases for the Review class."""
+    """Test Cases for the Review class
+    """
 
     def setUp(self):
-        """Sets up test methods."""
+        """Sets up test methods
+        """
         pass
 
     def tearDown(self):
-        """Tears down test methods."""
+        """Tears down test methods
+        """
         self.resetStorage()
         pass
 
     def resetStorage(self):
-        """Resets FileStorage data."""
+        """Resets FileStorage data
+        """
         FileStorage._FileStorage__objects = {}
         if os.path.isfile(FileStorage._FileStorage__file_path):
             os.remove(FileStorage._FileStorage__file_path)
 
     def test_8_instantiation(self):
-        """Tests instantiation of Review class."""
+        """Tests instantiation of Review class
+        """
 
         b = Review()
         self.assertEqual(str(type(b)), "<class 'models.review.Review'>")
@@ -41,7 +46,8 @@ class TestReview(unittest.TestCase):
         self.assertTrue(issubclass(type(b), BaseModel))
 
     def test_8_attributes(self):
-        """Tests the attributes of Review class."""
+        """Tests the attributes of Review class
+        """
         attributes = storage.attributes()["Review"]
         o = Review()
         for k, v in attributes.items():
